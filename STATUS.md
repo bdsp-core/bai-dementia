@@ -34,8 +34,8 @@ Same labeling rules as the 2023 paper. Match rate of V1 labels ↔
 
 | File | Status | Source |
 |---|---|---|
-| `exclusion_regex`, `dementia_regex`, `MCI_regex.txt`, `medications_regex.txt` | ✅ | `box:.../(internal)/Projects/dementia_detection/medical_data/` |
-| `get_*.ipynb` (5 EHR extraction notebooks) | ✅ | `box:.../brain_age_Dementia/code/` (cell outputs stripped) |
+| `exclusion_regex`, `dementia_regex`, `MCI_regex.txt`, `medications_regex.txt` | ✅ | (internal Box folder) |
+| `get_*.ipynb` (5 EHR extraction notebooks) | ✅ | (internal Box folder) (cell outputs stripped) |
 
 Inputs (PHI; staged locally only): `study_criteria_table_label.xlsx` (V1), `EDW_*.csv`, `RPDR_*.csv`, `MMSE/MoCA/CDR_*Final.xlsx`. Same as the 2023 paper.
 
@@ -47,8 +47,8 @@ PSG → feature matrix. Same code as the 2023 paper.
 
 | File | Status | Source |
 |---|---|---|
-| `segment_EEG.py`, `multitaper_spectrogram.py`, `bandpower.py`, `extract_features_parallel.py`, `load_mgh_sleep_dataset.py`, `main_BA.py` | ✅ | `dropbox:.../Haoqi Sun's files/Home/brainAge/brain_age_Elissa_AllMGH/mycode/` |
-| `main_box_2019.py` | ✅ | `box:.../brain_age_Dementia/code/brain_age_code/main.py` (Elissa's 2019 wrapper; references `/data/brain_age/mycode/` HPC paths) |
+| `segment_EEG.py`, `multitaper_spectrogram.py`, `bandpower.py`, `extract_features_parallel.py`, `load_mgh_sleep_dataset.py`, `main_BA.py` | ✅ | (internal Dropbox folder) |
+| `main_box_2019.py` | ✅ | (internal Box folder) (Elissa's 2019 wrapper; references `/data/brain_age/mycode/` HPC paths) |
 
 ---
 
@@ -143,11 +143,11 @@ The dementia n matches exactly. Other group sizes diverge — paper applied addi
 
 ## What's missing
 
-1. **Elissa's original figure-generation Python/notebook code.** Confirmed not in any accessible Box / Dropbox folder; was on an internal Dropbox folder no longer accessible to the project, referenced as `${DEMENTIA_DATA_ROOT}/` in `step2b_*ElissaCriteria*.py`.
+1. **Elissa's original figure-generation Python/notebook code.** Confirmed not in any accessible Box / Dropbox folder; was on an internal Dropbox folder no longer accessible to the project.
 2. **The exact paper-era cohort filter** that brought 5,144 PSGs / 88-44-1075-2336 group split.
 3. **AHI, ESS, BMI, PLMI, Smoker covariates** for Figure 3 — derivable from PSG metadata + RPDR but not pre-staged.
 4. **Per-stage Wake/N1/N2/N3 feature columns** for Figure 4 — current deid release has W/NREM/R only.
 
 ## Open question for Elissa / Haoqi
 
-If you have a backup of `internal_project_folder/` (the original project Dropbox folder), the figure-generation notebooks should be there.
+If you have a backup of the original project Dropbox folder, the figure-generation notebooks should be there.

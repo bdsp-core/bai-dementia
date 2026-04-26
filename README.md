@@ -60,7 +60,7 @@ bai-dementia/
 │                          for visual comparison
 ├── scripts/               De-identification + manifest-build utilities
 ├── LICENSE                CC BY-NC 4.0
-├── README.md, STATUS.md, ToDo.md
+├── README.md, STATUS.md
 └── requirements.txt
 ```
 
